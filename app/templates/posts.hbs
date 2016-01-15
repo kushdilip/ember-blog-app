@@ -1,7 +1,7 @@
 <ul>
   {{#each content as |post|}}
     <li>
-      <strong>{{post.title}}</strong>
+      <strong>{{#link-to 'posts.post' post}}{{post.title}}{{/link-to}}</strong>
     </li>
   {{/each}}  
 </ul>
