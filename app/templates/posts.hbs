@@ -1,14 +1,12 @@
-<h2>Ember Blog Expample</h2>
-<hr>
-<h3>Posts</h3>
-<ul>
-  {{#each content as |post|}}
-    <li>
-      <strong>{{#link-to 'posts.post' post}}{{post.title}}{{/link-to}}</strong>
-    </li>
-  {{/each}}  
-</ul>
-
-<hr>
-
-{{outlet}}
+<div id="layout" class="pure-g">
+  <div class="sidebar pure-u-1 pure-u-md-1-4">
+      {{#each content as |post|}}
+        <div class="content-subhead">
+          <h3>{{#link-to 'posts.post' post}}{{post.title}}{{/link-to}}</h3>
+        </div>
+      {{/each}}
+  </div>
+  <div class="content pure-u-1 pure-u-md-3-4">
+    {{outlet}}
+  </div>
+</div>
